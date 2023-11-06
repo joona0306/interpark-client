@@ -39,7 +39,7 @@
   height: 38px;
   /* a 태그는 inline이다. 그래서 너비, 높이는 못 준다. */
   display: block;
-  background-image: url("http: //localhost 3000/images/logo.svg");
+  background-image: url("http://localhost:3000/images/logo.svg");
 }
 .header-search {
   position: relative;

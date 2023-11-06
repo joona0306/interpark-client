@@ -4,7 +4,7 @@ import "swiper/css";
 import "../styles/visual.css";
 import { useEffect, useRef, useState } from "react";
 
-function Visual() {
+const Visual = () => {
   // js 코드 자리
   // JSX 에 작성된 html 태그를 React 에서 참조
   // 1. swiper 슬라이드 태그를 참조한다.
@@ -37,7 +37,7 @@ function Visual() {
       // console.log("visual_" + (i + 1));
       visualArray[i] = visualRes["visual_" + (i + 1)];
     }
-    console.log(visualArray);
+    // console.log(visualArray);
     setVisualHtml(visualArray);
 
     // // 배열자료(VisualArray)를 뜯어서 컴포넌트 담기
@@ -115,5 +115,5 @@ function Visual() {
       </div>
     </section>
   );
-}
+};
 export default Visual;
