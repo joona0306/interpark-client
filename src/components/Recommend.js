@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
+import axios from "axios";
 import "swiper/css";
 import "swiper/css/navigation";
 import "../styles/recommend.css";
@@ -15,6 +16,24 @@ const Recommend = () => {
   // JSON 데이터 저장해 두고, 자료가 바뀌면 화면을 변경할
   // 리액트 변수를 만든다.
   const [htmlTag, setHtmlTag] = useState([]);
+
+  // 외부 데이터 연동하기 (axios 이용)
+  const axiosJsonData = () => {
+    axios
+      .get("recommend.json")
+      .then(function (res) {
+        let arr = [];
+        for (let i = 0; i < res.data.total; i++) {
+          const obj = res.data["good_" + (i + 1)];
+          arr[i] = obj;
+        }
+        // console.log(arr);
+        setHtmlTag(arr);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
 
   // 외부 데이터 연동하기 (fetch 이용)
   const getJsonData = () => {
@@ -60,7 +79,8 @@ const Recommend = () => {
   // 원하는 시점을 감시하고 실행할 함수
   useEffect(() => {
     // 외부 데이터 불러들이기
-    getJsonData();
+    axiosJsonData();
+    // getJsonData();
   }, []);
 
   return (

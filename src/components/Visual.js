@@ -3,6 +3,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "../styles/visual.css";
 import { useEffect, useRef, useState } from "react";
+// axios 모듈(js파일) 가져오기
+import axios from "axios";
 
 const Visual = () => {
   // js 코드 자리
@@ -10,19 +12,32 @@ const Visual = () => {
   // 1. swiper 슬라이드 태그를 참조한다.
   const swiperRef = useRef();
 
+  // 외부 데이터 연동 (axios 활용)
+  const axiosGetData = function () {
+    axios
+      .get("visual.json")
+      .then(function (res) {
+        makeVisualSlide(res.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
   // 외부 데이터 연동 ( fetch 활용 )
   const fetchGetData = () => {
     fetch("visual.json")
       .then((res) => res.json())
       .then((result) => {
-        // console.log(result);
-        // 자료 출력
+        //       // console.log(result);
+        //       // 자료 출력
         makeVisualSlide(result);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+
   // visual 슬라이드 내용 채우는 기능
   // 리액트용 변수 : 컴포넌트에 출력할 JSX
   //        일반변수 말고 리액트용 변수를 state 라고 함
@@ -60,7 +75,8 @@ const Visual = () => {
   useEffect(() => {
     // 렌더링될 때
     // visual.json 데이터 불러들이기 기능실행
-    fetchGetData();
+    axiosGetData();
+    // fetchGetData();
 
     return () => {
       // 삭제될 때 (clean Up 함수)
