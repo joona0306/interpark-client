@@ -62,5 +62,28 @@
   width: 0.7rem;
   height: 1.1rem;
   margin-left: 0.7rem;
-  background: url("http://localhost:3000/images/linkArrow.svg") no-repeat center;
+  background: url("../images/linkArrow.svg") no-repeat center;
+}
+
+/* 전체보기 버튼 */
+.show-more {
+  position: relative;
+  margin-top: 60%;
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #3a3a3a;
+}
+.show-more a {
+  position: relative;
+  display: block;
+}
+.show-more i {
+  position: relative;
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto 0.6rem;
+  background: url("../images/btn_moreproduct.svg") no-repeat center;
 }

@@ -39,7 +39,7 @@
   height: 38px;
   /* a 태그는 inline이다. 그래서 너비, 높이는 못 준다. */
   display: block;
-  background-image: url("http://localhost:3000/images/logo.svg");
+  background-image: url("../images/logo.svg");
 }
 .header-search {
   position: relative;
@@ -74,7 +74,7 @@
   height: 45px;
   border: none;
   background-color: transparent;
-  background-image: url("http: //localhost 3000/images/btn_search.svg");
+  background-image: url("../images/btn_search.svg");
   background-repeat: no-repeat;
   background-position: center;
   font-size: 0;
@@ -148,8 +148,7 @@
   */
   display: block;
   margin-left: 4px;
-  background: url("http: //localhost 3000/images/badge_hot.svg") no-repeat
-    center;
+  background: url("../images/badge_hot.svg") no-repeat center;
 }
 
 .header-cate li a img {

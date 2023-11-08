@@ -1,10 +1,13 @@
+import { BtnSlidePrev, BtnSlideNext } from "../components/ui/buttons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import "swiper/css";
-import "../styles/visual.css";
 import { useEffect, useRef, useState } from "react";
 // axios 모듈(js파일) 가져오기
 import axios from "axios";
+import "swiper/css";
+import "../styles/visual.css";
+import styled from "@emotion/styled";
+import { InnerArea, SectionTag } from "./layout/layout";
 
 const Visual = () => {
   // js 코드 자리
@@ -83,9 +86,21 @@ const Visual = () => {
     };
   }, []);
 
+  const SlideItem = styled.div`
+    position: relative;
+    width: 628px;
+  `;
+  const SlideLink = styled.a`
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-radius: 13px;
+  `;
+
   return (
-    <section className="visual">
-      <div className="visual-inner">
+    <SectionTag pt={30} pb={80}>
+      <InnerArea style={{ height: 345 }}>
         <Swiper
           slidesPerView={2}
           spaceBetween={24}
@@ -103,33 +118,31 @@ const Visual = () => {
           {visualHtml.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className="visual-slide-item">
-                  <a href={item.url}>
+                <SlideItem>
+                  <SlideLink href={item.url}>
                     <img
                       src={process.env.PUBLIC_URL + item.file}
                       alt={item.file}
                     />
-                  </a>
-                </div>
+                  </SlideLink>
+                </SlideItem>
               </SwiperSlide>
             );
           })}
         </Swiper>
 
-        <button
-          className="visual-slide-prev"
+        <BtnSlidePrev
           onClick={() => {
             swiperRef.current.slidePrev();
           }}
-        ></button>
-        <button
-          className="visual-slide-next"
+        ></BtnSlidePrev>
+        <BtnSlideNext
           onClick={() => {
             swiperRef.current.slideNext();
           }}
-        ></button>
-      </div>
-    </section>
+        ></BtnSlideNext>
+      </InnerArea>
+    </SectionTag>
   );
 };
 export default Visual;

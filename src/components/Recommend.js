@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { BtnCate } from "./ui/buttons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
@@ -7,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "../styles/recommend.css";
 import "../styles/common.css";
+import { InnerArea, SectionTag } from "./layout/layout";
 
 const Recommend = () => {
   // js 코드 자리
@@ -84,8 +86,8 @@ const Recommend = () => {
   }, []);
 
   return (
-    <section className="recommend">
-      <div className="recommend-inner">
+    <SectionTag pt={0} pb={90}>
+      <InnerArea>
         <div className="recommend-header">
           <h2 className="recommend-title">쇼핑추천</h2>
           <span className="recommend-txt">
@@ -97,18 +99,16 @@ const Recommend = () => {
           <div className="recommend-category">
             <ul className="recommend-list">
               <li>
-                <button className="recommend-cate-btn recommend-cate-btn-active">
-                  쎈딜
-                </button>
+                <BtnCate active={true}>쎈딜</BtnCate>
               </li>
               <li>
-                <button className="recommend-cate-btn">베스트</button>
+                <BtnCate>베스트</BtnCate>
               </li>
               <li>
-                <button className="recommend-cate-btn">블프데이</button>
+                <BtnCate>블프데이</BtnCate>
               </li>
               <li>
-                <button className="recommend-cate-btn">디지털프라자</button>
+                <BtnCate>디지털프라자</BtnCate>
               </li>
               <li>
                 <a href="#" className="recommend-cate-btn">
@@ -186,8 +186,8 @@ const Recommend = () => {
             <span>쇼핑 홈 바로가기</span>
           </a>
         </div>
-      </div>
-    </section>
+      </InnerArea>
+    </SectionTag>
   );
 };
 export default Recommend;
