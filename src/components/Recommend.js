@@ -137,7 +137,7 @@ const Recommend = () => {
                 return (
                   <SwiperSlide key={index}>
                     {index === htmlTag.length - 1 ? (
-                      <div className="recommend-more">
+                      <div className="show-more">
                         <a href={item.url}>
                           <i></i>
                           전체보기
