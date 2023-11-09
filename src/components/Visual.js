@@ -96,6 +96,10 @@ const Visual = () => {
     display: block;
     overflow: hidden;
     border-radius: 13px;
+
+    img {
+      width: 100%;
+    }
   `;
 
   return (
