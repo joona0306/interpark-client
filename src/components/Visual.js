@@ -2,12 +2,12 @@ import { BtnSlidePrev, BtnSlideNext } from "../components/ui/buttons";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { useEffect, useRef, useState } from "react";
+import styled from "@emotion/styled";
+import { InnerArea, SectionTag } from "./layout/layout";
 // axios 모듈(js파일) 가져오기
 import axios from "axios";
 import "swiper/css";
 import "../styles/visual.css";
-import styled from "@emotion/styled";
-import { InnerArea, SectionTag } from "./layout/layout";
 
 const Visual = () => {
   // js 코드 자리
