@@ -1,0 +1,62 @@
+{
+  "total": 8,
+  "good_1": {
+    "image": "image/ticket1.gif",
+    "name": "태양의서커스<루치아>",
+    "place": "잠실종합운동장 내 빅탑",
+    "duration": "2023.10.25 ~ 2023.12.31",
+    "badge": "좌석우위",
+    "url": "a.html"
+  },
+  "good_2": {
+    "image": "image/ticket2.gif",
+    "name": "뮤지컬<모테크리스토>",
+    "place": "충무아트센터 대극장",
+    "duration": "2023.11.21 ~ 2024.02.25",
+    "badge": "좌석우위",
+    "url": "a.html"
+  },
+  "good_3": {
+    "image": "image/ticket3.gif",
+    "name": "태양의서커스<루치아>",
+    "place": "잠실종합운동장 내 빅탑",
+    "duration": "2023.10.25 ~ 2023.12.31",
+    "badge": "좌석우위",
+    "url": "a.html"
+  },
+  "good_4": {
+    "image": "image/ticket4.gif",
+    "name": "태양의서커스<루치아>",
+    "place": "잠실종합운동장 내 빅탑",
+    "duration": "2023.10.25 ~ 2023.12.31",
+    "badge": "좌석우위",
+    "url": "a.html"
+  },
+  "good_5": {
+    "image": "image/ticket5.gif",
+    "name": "태양의서커스<루치아>",
+    "place": "잠실종합운동장 내 빅탑",
+    "duration": "2023.10.25 ~ 2023.12.31",
+    "badge": "좌석우위",
+    "url": "a.html"
+  },
+  "good_6": {
+    "image": "image/ticket6.gif",
+    "name": "태양의서커스<루치아>",
+    "place": "잠실종합운동장 내 빅탑",
+    "duration": "2023.10.25 ~ 2023.12.31",
+    "badge": "좌석우위",
+    "url": "a.html"
+  },
+  "good_7": {
+    "image": "image/ticket7.gif",
+    "name": "태양의서커스<루치아>",
+    "place": "잠실종합운동장 내 빅탑",
+    "duration": "2023.10.25 ~ 2023.12.31",
+    "badge": "좌석우위",
+    "url": "a.html"
+  },
+  "good_8": {
+    "url": "a.html"
+  }
+}

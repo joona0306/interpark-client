@@ -66,3 +66,28 @@ export const BtnCate = styled.button`
   cursor: pointer;
   border-radius: 27px;
 `;
+
+// 전체보기 버튼
+export const BtnMore = styled.a`
+  position: relative;
+  display: inline-block;
+  width: auto;
+  height: 5.6rem;
+  margin: 2rem auto 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 5.6rem;
+  border-radius: 3.8rem;
+  padding: 0 3.9rem;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+
+  &:span::after {
+    content: "";
+    display: inline-block;
+    width: 0.7rem;
+    height: 1.1rem;
+    margin-left: 0.7rem;
+    background: url("../../images/linkArrow.svg") no-repeat center;
+  }
+`;
