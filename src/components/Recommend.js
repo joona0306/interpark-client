@@ -22,7 +22,9 @@ const Recommend = () => {
   // 외부 데이터 연동하기 (axios 이용)
   const axiosJsonData = () => {
     axios
-      .get("http://localhost:4000/recommend")
+      .get(
+        "https://port-0-interpark-server-3yl7k2blopix5c7.sel5.cloudtype.app/recommend"
+      )
       .then(function (res) {
         let arr = [];
         for (let i = 0; i < res.data.total; i++) {
