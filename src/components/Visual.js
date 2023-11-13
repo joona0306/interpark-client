@@ -18,7 +18,9 @@ const Visual = () => {
   // 외부 데이터 연동 (axios 활용)
   const axiosGetData = function () {
     axios
-      .get("http://localhost:4000/visual")
+      .get(
+        "https://port-0-interpark-server-3yl7k2blopix5c7.sel5.cloudtype.app/visual"
+      )
       .then(function (res) {
         makeVisualSlide(res.data);
       })
